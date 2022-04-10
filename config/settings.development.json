@@ -9,5 +9,21 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultBeaches": [
+    { "name":  "Super Secret Beach", "location": "Honolulu, HI", "description": "Blue water and fine yellow sand at this super secret beach.", "visited": 10}
+  ],
+
+  "defaultHikes": [
+    { "name":  "Super Secret Hike", "location": "Kailua, HI", "description": "Experience the mountain environment and get some exercise in the great outdoors.", "visited": 11}
+  ],
+
+  "defaultViews": [
+    { "name":  "Super Secret View", "location": "Kaneohe, HI", "description": "One of the most breathtaking views on the island.", "visited": 12}
+  ],
+
+  "defaultSpots": [
+    { "name":  "Campus Spot", "location": "Next to Hamilton Library", "description": "Great place to study or meet with a team for a meeting.", "visited": 13}
   ]
 }
