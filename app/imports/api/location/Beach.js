@@ -16,6 +16,7 @@ class BeachesCollection {
       name: String,
       description: String,
       location: String,
+      image: String,
       visited: Number,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
