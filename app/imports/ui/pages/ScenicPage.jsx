@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Table, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-// import { Views } from '../../api/location/Views';
+import { Views } from '../../api/location/View';
 // import CardComponent from '../components/CardComponent';
 
 /** Renders a table containing all of the View documents. Use <CardComponent> to render each row. */
