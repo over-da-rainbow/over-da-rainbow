@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Beaches } from '../../api/location/Beach';
-// import CardComponent from '../components/CardComponent';
+import LocationCard from '../components/LocationCard';
 
 /** Renders a table containing all of the View documents. Use <CardComponent> to render each row. */
 class ListBeaches extends React.Component {
@@ -20,7 +20,7 @@ class ListBeaches extends React.Component {
       <Container>
         <Header as="h2" textAlign="center">Beach Page</Header>
         <Card.Group>
-          <!-- {this.props.views.map((view) => <CardComponent key={view._id} view={views} />)} -->
+          {this.props.beaches.map((place, index) => <LocationCard key={index} place={place}/>)}
         </Card.Group>
       </Container>
     );
@@ -28,7 +28,7 @@ class ListBeaches extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-ListStuff.propTypes = {
+ListBeaches.propTypes = {
   beaches: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };

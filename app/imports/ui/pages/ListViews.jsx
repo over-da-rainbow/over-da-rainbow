@@ -1,9 +1,10 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Views } from '../../api/location/View';
+import LocationCard from '../components/LocationCard';
 // import CardComponent from '../components/CardComponent';
 
 /** Renders a table containing all of the View documents. Use <CardComponent> to render each row. */
@@ -20,7 +21,7 @@ class ListViews extends React.Component {
       <Container>
         <Header as="h2" textAlign="center">Scenic View Page</Header>
         <Card.Group>
-          <!-- {this.props.views.map((view) => <CardComponent key={view._id} view={views} />)} -->
+          {this.props.views.map((place, index) => <LocationCard key={index} place={place}/>)}
         </Card.Group>
       </Container>
     );
@@ -28,7 +29,7 @@ class ListViews extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-ListStuff.propTypes = {
+ListViews.propTypes = {
   views: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
