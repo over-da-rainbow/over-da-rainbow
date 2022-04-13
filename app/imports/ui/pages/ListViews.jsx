@@ -7,7 +7,7 @@ import { Views } from '../../api/location/View';
 // import CardComponent from '../components/CardComponent';
 
 /** Renders a table containing all of the View documents. Use <CardComponent> to render each row. */
-class ScenicPage extends React.Component {
+class ListViews extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -18,7 +18,7 @@ class ScenicPage extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center">Scenic Page</Header>
+        <Header as="h2" textAlign="center">Scenic View Page</Header>
         <Card.Group>
           <!-- {this.props.views.map((view) => <CardComponent key={view._id} view={views} />)} -->
         </Card.Group>
@@ -45,4 +45,4 @@ export default withTracker(() => {
     views,
     ready,
   };
-})(ScenicPage);
+})(ListViews);
