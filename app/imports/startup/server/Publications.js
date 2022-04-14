@@ -1,13 +1,37 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
+import { Beaches } from '../../api/location/Beach';
+import { Hikes } from '../../api/location/Hike';
+import { Views } from '../../api/location/View';
+import { Spots } from '../../api/location/Spot';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
-Meteor.publish(Stuffs.userPublicationName, function () {
+Meteor.publish(Beaches.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Stuffs.collection.find({ owner: username });
+    return Beaches.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Hikes.userPublicationName, function () {
+  if (this.userId) {
+    return Hikes.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Views.userPublicationName, function () {
+  if (this.userId) {
+    return Views.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Spots.userPublicationName, function () {
+  if (this.userId) {
+    return Spots.collection.find();
   }
   return this.ready();
 });
