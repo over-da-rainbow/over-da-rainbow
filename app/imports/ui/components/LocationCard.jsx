@@ -12,10 +12,10 @@ class LocationCard extends React.Component {
         <Card.Content>
           <Card.Header>{this.props.locationCard.name}</Card.Header>
           <Card.Meta>
-            <span>{this.props.locationCard.image}</span>
+            <span>{this.props.locationCard.location}</span>
           </Card.Meta>
           <Card.Description>
-            {this.props.locationCard.image}
+            {this.props.locationCard.description}
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
@@ -31,7 +31,14 @@ class LocationCard extends React.Component {
 
 // Require a document to be passed to this component.
 LocationCard.propTypes = {
-  locationCard: PropTypes.object.isRequired,
+  locationCard: PropTypes.shape({
+    name: PropTypes.string,
+    visited: PropTypes.number,
+    image: PropTypes.string,
+    description: PropTypes.string,
+    location: PropTypes.string,
+    _id: PropTypes.string,
+  }).isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.

@@ -41,6 +41,7 @@ export default withTracker(() => {
   const ready = subscription.ready();
   // Get the Stuff documents
   const beaches = Beaches.collection.find({}).fetch();
+  console.log(beaches);
   return {
     beaches,
     ready,

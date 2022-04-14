@@ -17,18 +17,18 @@
   ],
 
   "defaultBeaches": [
-    { "name":  "Super Secret Beach", "location": "Honolulu, HI", "description": "Blue water and fine yellow sand at this super secret beach.", "image": "test1", "visited": 10}
+    { "name":  "Super Secret Beach", "location": "Honolulu, HI", "description": "Blue water and fine yellow sand at this super secret beach.", "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F62%2FMakapu%25CA%25BBu_Beach.JPG&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AMakapu%25CA%25BBu_Beach.JPG&tbnid=MgcKVGWe3Z2BUM&vet=12ahUKEwjDx_fmqpL3AhUsATQIHcIdDzQQMygAegUIARCOAQ..i&docid=ziksu5fNbfEZrM&w=2000&h=1132&safe=images&ved=2ahUKEwjDx_fmqpL3AhUsATQIHcIdDzQQMygAegUIARCOAQ", "visited": 10}
   ],
 
   "defaultHikes": [
-    { "name":  "Super Secret Hike", "location": "Kailua, HI", "description": "Experience the mountain environment and get some exercise in the great outdoors.", "image": "test2", "visited": 11}
+    { "name":  "Super Secret Hike", "location": "Kailua, HI", "description": "Experience the mountain environment and get some exercise in the great outdoors.", "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.journeyera.com%2Fwp-content%2Fuploads%2F2016%2F07%2Fhawaii-images-06094.jpg&imgrefurl=https%3A%2F%2Fwww.journeyera.com%2Fcrouching-lion-hike-oahu-hawaii%2F&tbnid=E7PvRbIIVt0ZIM&vet=12ahUKEwidrrieq5L3AhVTJX0KHSmrC5cQMygAegUIARDaAQ..i&docid=BtilMZDw_9HNyM&w=1500&h=1000&safe=images&ved=2ahUKEwidrrieq5L3AhVTJX0KHSmrC5cQMygAegUIARDaAQ", "visited": 11}
   ],
 
   "defaultViews": [
-    { "name":  "Super Secret View", "location": "Kaneohe, HI", "description": "One of the most breathtaking views on the island.", "image": "test3", "visited": 12}
+    { "name":  "Super Secret View", "location": "Kaneohe, HI", "description": "One of the most breathtaking views on the island.", "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Flive.staticflickr.com%2F65535%2F51124812188_b8b250be5b_b.jpg&imgrefurl=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Ferictessmer%2F51124812188&tbnid=sVK_hezkQ--g3M&vet=12ahUKEwj6tdbxq5L3AhXeAjQIHYnhC28QMygBegQIARBH..i&docid=B3X9037BhOkBjM&w=1024&h=594&itg=1&safe=images&ved=2ahUKEwj6tdbxq5L3AhXeAjQIHYnhC28QMygBegQIARBH", "visited": 12}
   ],
 
   "defaultSpots": [
-    { "name":  "Campus Spot", "location": "Next to Hamilton Library", "description": "Great place to study or meet with a team for a meeting.", "image": "test4", "visited": 13}
+    { "name":  "Campus Spot", "location": "Next to Hamilton Library", "description": "Great place to study or meet with a team for a meeting.", "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmanoa.hawaii.edu%2Fwp%2Fwp-content%2Fuploads%2F2017%2F09%2Fhamilton-library.jpg&imgrefurl=https%3A%2F%2Fmanoa.hawaii.edu%2Flibraries%2F&tbnid=8XaLLTTq0cieeM&vet=12ahUKEwjO7rCCrJL3AhU1IH0KHVrDBm8QMygCegUIARD_AQ..i&docid=KA9QPPw0csn3zM&w=1200&h=700&safe=images&ved=2ahUKEwjO7rCCrJL3AhU1IH0KHVrDBm8QMygCegUIARD_AQ", "visited": 13}
   ]
 }
