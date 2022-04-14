@@ -20,7 +20,7 @@ class ListBeaches extends React.Component {
       <Container>
         <Header as="h2" textAlign="center">Beach Page</Header>
         <Card.Group>
-          {this.props.beaches.map((place, index) => <LocationCard key={index} place={place}/>)}
+          {this.props.beaches.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}
         </Card.Group>
       </Container>
     );
@@ -41,7 +41,6 @@ export default withTracker(() => {
   const ready = subscription.ready();
   // Get the Stuff documents
   const beaches = Beaches.collection.find({}).fetch();
-  console.log(beaches);
   return {
     beaches,
     ready,

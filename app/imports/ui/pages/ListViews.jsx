@@ -5,7 +5,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Views } from '../../api/location/View';
 import LocationCard from '../components/LocationCard';
-// import CardComponent from '../components/CardComponent';
 
 /** Renders a table containing all of the View documents. Use <CardComponent> to render each row. */
 class ListViews extends React.Component {
@@ -21,7 +20,7 @@ class ListViews extends React.Component {
       <Container>
         <Header as="h2" textAlign="center">Scenic View Page</Header>
         <Card.Group>
-          {this.props.views.map((place, index) => <LocationCard key={index} place={place}/>)}
+          {this.props.views.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}
         </Card.Group>
       </Container>
     );
