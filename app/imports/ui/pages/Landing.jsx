@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Grid, Header, Image } from 'semantic-ui-react';
+import { Container, Grid, Header, Image } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -7,9 +7,9 @@ class Landing extends React.Component {
     return (
       <div>
         <div className='scenic-background-image'>
-          <Grid id='landing-page' centered columns={3} divided='vertically' style={{ paddingTop: 50 }}>
+          <Grid id='landing-page' centered columns={3} divided='vertically' style={{ paddingTop: 100 }}>
             <Grid.Column>
-              <Image circular src='https://cdn-icons-png.flaticon.com/512/2067/2067602.png'/>
+              <Image style={{ width: 500 }}centered circular src='../images/overdarainbow-logo.png'/>
             </Grid.Column>
           </Grid>
         </div>
@@ -20,13 +20,13 @@ class Landing extends React.Component {
                 <Header as='h1'>Discover</Header>
               </Grid.Column>
               <Grid.Column>
-                <Header as='h1'>paragraph for discover</Header>
+                <Header as='h2'>Adventure to new places with friends and classmates</Header>
               </Grid.Column>
             </Grid.Row>
 
             <Grid.Row>
               <Grid.Column>
-                <Header as='h1'>paragraph for review</Header>
+                <Header as='h2'>Share your review and input with friends</Header>
               </Grid.Column>
               <Grid.Column>
                 <Header as='h1'>Review</Header>
