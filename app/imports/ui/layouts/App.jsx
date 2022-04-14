@@ -9,6 +9,9 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
+import ListBeaches from '../pages/ListBeaches';
+import ListHikes from '../pages/ListHikes';
+import ListViews from '../pages/ListViews';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
@@ -29,6 +32,9 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <ProtectedRoute path="/list" component={ListStuff}/>
+            <ProtectedRoute path="/beach" component={ListBeaches}/>
+            <ProtectedRoute path="/hike" component={ListHikes}/>
+            <ProtectedRoute path="/view" component={ListViews}/>
             <ProtectedRoute path="/add" component={AddStuff}/>
             <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
