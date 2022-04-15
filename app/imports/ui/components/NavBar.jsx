@@ -29,7 +29,7 @@ class NavBar extends React.Component {
             <Menu.Item as={NavLink} activeClassName="" exact to="/spot" key="spots">
               <Header inverted as='h3'>On Campus</Header>
             </Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="" exact to="/" key="volunteer">
+            <Menu.Item as={NavLink} activeClassName="" exact to="/volunteer" key="volunteer">
               <Header inverted as='h3'>Volunteer</Header>
             </Menu.Item>]
         ) : ''}
