@@ -11,7 +11,7 @@ class Landing extends React.Component {
             <Image style={{ width: 500 }}centered circular src='../images/overdarainbow-logo.png'/>
           </Grid.Column>
         </Grid>
-        <Container centered>
+        <Container>
           <Grid style={{ padding: 70 }} divided={'vertically'} centered columns={2}>
             <Grid.Row style={{ paddingTop: 70 }}>
               <Grid.Column>
