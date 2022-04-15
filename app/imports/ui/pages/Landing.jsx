@@ -18,16 +18,25 @@ class Landing extends React.Component {
                 <Header className={'big-letters'} inverted as='h1'>Discover</Header>
               </Grid.Column>
               <Grid.Column>
-                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Adventure to new places with friends and classmates</Header>
+                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Adventure to Oahu's best spots with friends and classmates</Header>
               </Grid.Column>
             </Grid.Row>
 
             <Grid.Row style={{ paddingTop: 70 }}>
               <Grid.Column>
-                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Share your experience and learn about others' by leaving a review</Header>
+                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Share your experiences and give feedback for future explorers</Header>
               </Grid.Column>
               <Grid.Column>
                 <Header className={'big-letters'} inverted as='h1'>Review</Header>
+              </Grid.Column>
+            </Grid.Row>
+
+            <Grid.Row style={{ paddingTop: 70 }}>
+              <Grid.Column>
+                <Header className={'big-letters'} inverted as='h1'>Suggest</Header>
+              </Grid.Column>
+              <Grid.Column>
+                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Help out other users by suggesting your favorite spots!</Header>
               </Grid.Column>
             </Grid.Row>
           </Grid>
