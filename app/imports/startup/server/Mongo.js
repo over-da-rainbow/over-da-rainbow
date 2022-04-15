@@ -4,6 +4,7 @@ import { Beaches } from '../../api/location/Beach';
 import { Hikes } from '../../api/location/Hike';
 import { Spots } from '../../api/location/Spot';
 import { Views } from '../../api/location/View';
+import { Volunteer } from '../../api/location/Volunteer';
 
 /* eslint-disable no-console */
 
@@ -31,6 +32,11 @@ function addSpot(data) {
 function addView(data) {
   console.log(`  Adding: ${data.name}`);
   Views.collection.insert(data);
+}
+
+function addVolunteer(data) {
+  console.log(`  Adding: ${data.name}`);
+  Volunteer.collection.insert(data);
 }
 
 // Initialize the StuffsCollection if empty.
@@ -66,5 +72,12 @@ if (Views.collection.find().count() === 0) {
   if (Meteor.settings.defaultViews) {
     console.log('Creating View data.');
     Meteor.settings.defaultViews.map(data => addView(data));
+  }
+}
+
+if (Volunteer.collection.find().count() === 0) {
+  if (Meteor.settings.defaultVolunteer) {
+    console.log('Creating Volunteer data.');
+    Meteor.settings.defaultVolunteer.map(data => addVolunteer(data));
   }
 }
