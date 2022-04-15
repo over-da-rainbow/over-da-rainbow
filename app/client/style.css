@@ -1,5 +1,10 @@
 .scenic-background-image {
     background: url("https://www.journeyera.com/wp-content/uploads/2016/07/hawaii-images-06094.jpg") no-repeat center center fixed;
     background-size: cover;
-    height: 600px;
+    height: 1000px;
+}
+
+.big-letters {
+    font-family: "Academy Engraved LET" !important;
+    font-size: 100px !important;
 }
