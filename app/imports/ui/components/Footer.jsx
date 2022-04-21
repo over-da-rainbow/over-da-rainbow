@@ -5,7 +5,7 @@ class Footer extends React.Component {
   render() {
     const divStyle = { paddingTop: '15px' };
     return (
-      <Footer inverted borderless>
+      <footer>
         <div style={divStyle} className="ui center aligned container">
           <hr />
           Over Da Rainbow Members: <a href="https://rubegen.github.io/">Ruben Jacobo, </a>
@@ -16,7 +16,7 @@ class Footer extends React.Component {
           Honolulu, HI 96822 <br />
           <a href="https://over-da-rainbow.github.io">Over Da Rainbow Home Page</a>
         </div>
-      </Footer>
+      </footer>
     );
   }
 }

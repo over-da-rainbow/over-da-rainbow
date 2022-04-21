@@ -8,7 +8,7 @@ class Landing extends React.Component {
       <div className='scenic-background-image'>
         <Grid id='landing-page' centered columns={3} divided='vertically' style={{ paddingTop: 100 }}>
           <Grid.Column>
-            <Image style={{ width: 500 }}centered circular src='../images/overdarainbow_v2.png'/>
+            <Image style={{ width: 500 }}centered circular src='../images/overdarainbow-logo.png'/>
           </Grid.Column>
         </Grid>
         <Container>
@@ -18,7 +18,7 @@ class Landing extends React.Component {
                 <Header className={'big-letters'} inverted as='h1'>Discover</Header>
               </Grid.Column>
               <Grid.Column>
-                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Adventure to Oahu&apos;s best spots with friends and classmates</Header>
+                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Adventure to Oahu's best spots with friends and classmates</Header>
               </Grid.Column>
             </Grid.Row>
 
