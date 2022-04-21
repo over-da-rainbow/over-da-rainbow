@@ -7,8 +7,8 @@ import { withRouter } from 'react-router-dom';
 class LocationCard extends React.Component {
   render() {
     return (
-      <Card>
-        <Image src={this.props.locationCard.image} wrapped ui={false} />
+      <Link><Card>
+        <Image src={this.props.locationCard.image} wrapped ui={false}/>
         <Card.Content>
           <Card.Header>{this.props.locationCard.name}</Card.Header>
           <Card.Meta>
@@ -20,11 +20,11 @@ class LocationCard extends React.Component {
         </Card.Content>
         <Card.Content extra>
           <a>
-            <Icon name='user' />
+            <Icon name='user'/>
             {this.props.locationCard.visited} visits
           </a>
         </Card.Content>
-      </Card>
+      </Card></Link>
     );
   }
 }
