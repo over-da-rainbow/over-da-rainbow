@@ -14,7 +14,7 @@ import ListHikes from '../pages/ListHikes';
 import ListViews from '../pages/ListViews';
 import ListSpots from '../pages/ListSpots';
 import ListVolunteer from '../pages/ListVolunteer';
-import AddStuff from '../pages/AddStuff';
+import AddLocation from '../pages/AddLocation';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -39,9 +39,9 @@ class App extends React.Component {
             <ProtectedRoute path="/view" component={ListViews}/>
             <ProtectedRoute path="/spot" component={ListSpots}/>
             <ProtectedRoute path="/volunteer" component={ListVolunteer}/>
-            <ProtectedRoute path="/add" component={AddStuff}/>
             <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+            <AdminProtectedRoute path="/addlocation" component={AddLocation}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>
