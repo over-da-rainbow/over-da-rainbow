@@ -8,3 +8,15 @@
     font-family: "Academy Engraved LET" !important;
     font-size: 100px !important;
 }
+
+footer {
+    background-color: azure !important;
+}
+
+body {
+    background-color: azure !important;
+}
+
+.navbar-color-spacing {
+    background-color: midnightblue !important;
+}

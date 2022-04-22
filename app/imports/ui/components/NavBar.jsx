@@ -11,7 +11,7 @@ class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '10px' };
     return (
-      <Menu style={menuStyle} attached="top" fluid widths={8} borderless inverted>
+      <Menu className='navbar-color-spacing' style={menuStyle} attached="top" fluid widths={8} borderless inverted>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
           <Image size='tiny' src="/images/logo-v1.png"/>
         </Menu.Item>
