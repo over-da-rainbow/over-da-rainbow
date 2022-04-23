@@ -6,6 +6,7 @@ import { Hikes } from '../../api/location/Hike';
 import { Views } from '../../api/location/View';
 import { Spots } from '../../api/location/Spot';
 import { Volunteer } from '../../api/location/Volunteer';
+import { Reviews } from '../../api/review/Reviews';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -40,6 +41,13 @@ Meteor.publish(Spots.userPublicationName, function () {
 Meteor.publish(Volunteer.userPublicationName, function () {
   if (this.userId) {
     return Volunteer.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Reviews.userPublicationName, function () {
+  if (this.userId) {
+    return Reviews.collection.find();
   }
   return this.ready();
 });
