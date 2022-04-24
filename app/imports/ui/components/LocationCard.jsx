@@ -1,13 +1,13 @@
 import React from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Icon, Image, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class LocationCard extends React.Component {
   render() {
     return (
-      <Link><Card>
+      <Button as={NavLink} to={`/location/${this.props.locationCard._id}`}><Card>
         <Image src={this.props.locationCard.image} wrapped ui={false}/>
         <Card.Content>
           <Card.Header>{this.props.locationCard.name}</Card.Header>
@@ -19,12 +19,12 @@ class LocationCard extends React.Component {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <a>
+          
             <Icon name='user'/>
             {this.props.locationCard.visited} visits
-          </a>
+
         </Card.Content>
-      </Card></Link>
+      </Card></Button>
     );
   }
 }
