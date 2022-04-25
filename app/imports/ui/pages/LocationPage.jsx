@@ -39,7 +39,14 @@ class LocationPage extends React.Component {
         <Header as="h4">Description</Header>
         <p>{doc.description}</p>
         <Header as="h4">Do&apos;s and Don&apos;t&apos;s</Header>
-        <p>...</p>
+        <ul>
+          <li>DO read all the signs in the area</li>
+          <li>DO respect the locals</li>
+        </ul>
+        <ul>
+          <li>DON&apos;T litter</li>
+          <li>DON&apos;T touch the animals</li>
+        </ul>
         <Header as="h4">Tags</Header>
         <Header as="h4"><Icon name="user"/>{doc.visited} Visits</Header>
         <hr/>
