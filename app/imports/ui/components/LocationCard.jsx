@@ -19,10 +19,8 @@ class LocationCard extends React.Component {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-
-            <Icon name='user'/>
-            {this.props.locationCard.visited} visits
-
+          <Icon name='user'/>
+          {this.props.locationCard.visited} visits
         </Card.Content>
       </Card></Button>
     );
