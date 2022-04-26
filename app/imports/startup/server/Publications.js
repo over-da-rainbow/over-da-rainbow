@@ -7,6 +7,7 @@ import { Views } from '../../api/location/View';
 import { Spots } from '../../api/location/Spot';
 import { Volunteer } from '../../api/location/Volunteer';
 import { Reviews } from '../../api/review/Reviews';
+import { Messages } from '../../api/message/Message';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -48,6 +49,13 @@ Meteor.publish(Volunteer.userPublicationName, function () {
 Meteor.publish(Reviews.userPublicationName, function () {
   if (this.userId) {
     return Reviews.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Messages.userPublicationName, function () {
+  if (this.userId) {
+    return Messages.collection.find();
   }
   return this.ready();
 });
