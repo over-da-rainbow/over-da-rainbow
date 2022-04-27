@@ -17,7 +17,7 @@ class ListSpots extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
+      <Container id='campus-page'>
         <Header as="h2" textAlign="center">Campus Spots Page</Header>
         <Card.Group>
           {this.props.spots.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}

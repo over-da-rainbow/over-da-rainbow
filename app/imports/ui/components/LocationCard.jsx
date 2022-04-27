@@ -7,7 +7,7 @@ import { withRouter, NavLink } from 'react-router-dom';
 class LocationCard extends React.Component {
   render() {
     return (
-      <Button as={NavLink} to={`/location/${this.props.locationCard._id}`}><Card>
+      <Button id='card' as={NavLink} to={`/location/${this.props.locationCard._id}`}><Card>
         <Image src={this.props.locationCard.image} wrapped ui={false}/>
         <Card.Content>
           <Card.Header>{this.props.locationCard.name}</Card.Header>

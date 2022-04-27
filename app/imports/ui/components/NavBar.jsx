@@ -17,22 +17,22 @@ class NavBar extends React.Component {
         </Menu.Item>
         {this.props.currentUser ? (
           [
-            <Menu.Item as={NavLink} activeClassName="" exact to="/bulletin" key="bulletin">
+            <Menu.Item id='navbar-bulletin' as={NavLink} activeClassName="" exact to="/bulletin" key="bulletin">
               <Header inverted as='h3'>Bulletin</Header>
             </Menu.Item>,
-            <Menu.Item as={NavLink} id="" activeClassName="active" exact to="/beach" key="beaches">
+            <Menu.Item id='navbar-beach' as={NavLink} activeClassName="active" exact to="/beach" key="beaches">
               <Header inverted as='h3'>Beaches</Header>
             </Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="active" exact to="/hike" key="hikes">
+            <Menu.Item id='navbar-hike' as={NavLink} activeClassName="active" exact to="/hike" key="hikes">
               <Header inverted as='h3'>Hikes</Header>
             </Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="" exact to="/view" key="views">
+            <Menu.Item id='navbar-view' as={NavLink} activeClassName="" exact to="/view" key="views">
               <Header inverted as='h3'>Scenic Views</Header>
             </Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="" exact to="/spot" key="spots">
+            <Menu.Item id='navbar-campus' as={NavLink} activeClassName="" exact to="/spot" key="spots">
               <Header inverted as='h3'>On Campus</Header>
             </Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="" exact to="/volunteer" key="volunteer">
+            <Menu.Item id='navbar-volunteer' as={NavLink} activeClassName="" exact to="/volunteer" key="volunteer">
               <Header inverted as='h3'>Volunteer</Header>
             </Menu.Item>]
         ) : ''}
@@ -49,7 +49,7 @@ class NavBar extends React.Component {
             <Dropdown id="navbar-current-user" text={this.props.currentUser} pointing="top right" icon={'user'}>
               <Dropdown.Menu>
                 {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                  <Dropdown.Item as={NavLink} activeClassName="active" exact to="/addlocation" key='addlocation'>
+                  <Dropdown.Item id='navbar-addLocation' as={NavLink} activeClassName="active" exact to="/addlocation" key='addlocation'>
                     <Header as='h4'>Add Location</Header>
                   </Dropdown.Item>
                 ) : ''}

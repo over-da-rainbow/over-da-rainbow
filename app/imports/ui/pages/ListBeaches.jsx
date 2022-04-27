@@ -17,7 +17,7 @@ class ListBeaches extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
+      <Container id='beach-page'>
         <Header as="h2" textAlign="center">Beach Page</Header>
         <Card.Group>
           {this.props.beaches.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}

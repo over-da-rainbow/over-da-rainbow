@@ -93,7 +93,7 @@ class AddLocation extends React.Component {
   render() {
     let fRef = null;
     return (
-      <Grid container centered>
+      <Grid container centered id='addLocation-page' >
         <Grid.Column>
           <Header as="h2" textAlign="center">Add Location</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
