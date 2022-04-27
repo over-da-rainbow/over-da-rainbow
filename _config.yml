@@ -1,4 +1,4 @@
-name: ci-rainbow
+name: rainbow
 
 on:
   push:
