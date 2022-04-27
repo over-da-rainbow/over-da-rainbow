@@ -1,4 +1,4 @@
-name: rainbow
+name: ci-meteor-application-template-react
 
 on:
   push:
