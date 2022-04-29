@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Loader, Image, Icon } from 'semantic-ui-react';
+import { Container, Header, Loader, Image, Icon, CommentGroup } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -8,6 +8,9 @@ import { Hikes } from '../../api/location/Hike';
 import { Spots } from '../../api/location/Spot';
 import { Views } from '../../api/location/View';
 import { Volunteer } from '../../api/location/Volunteer';
+import ReviewComponent from '../components/ReviewComponent';
+import { Reviews } from '../../api/review/Reviews';
+import LocationReviews from '../components/LocationReviews';
 
 /** Renders a table containing all of the View documents. Use <CardComponent> to render each row. */
 class LocationPage extends React.Component {
@@ -51,6 +54,12 @@ class LocationPage extends React.Component {
         <Header as="h4"><Icon name="user"/>{doc.visited} Visits</Header>
         <hr/>
         <Header as="h4">Reviews</Header>
+        <ReviewComponent owner={Meteor.user().username} locationId={this.props.documentId} right/>
+        <CommentGroup>
+          {this.props.reviews.map((Review, index) => <LocationReviews
+            key={index}
+            Review={Review}/>)}
+        </CommentGroup>
       </Container>
     );
   }
@@ -59,6 +68,7 @@ class LocationPage extends React.Component {
 LocationPage.propTypes = {
   documentId: PropTypes.string,
   ready: PropTypes.bool.isRequired,
+  reviews: PropTypes.array.isRequired,
 };
 
 export default withTracker(({ match }) => {
@@ -70,10 +80,13 @@ export default withTracker(({ match }) => {
   const spotsub = Meteor.subscribe(Spots.userPublicationName);
   const viewsub = Meteor.subscribe(Views.userPublicationName);
   const volunteersub = Meteor.subscribe(Volunteer.userPublicationName);
+  const reviewsub = Meteor.subscribe(Reviews.userPublicationName);
   // Determine if the subscription is ready
-  const ready = beachsub.ready() && hikesub.ready() && spotsub.ready() && viewsub.ready() && volunteersub.ready();
+  const ready = beachsub.ready() && hikesub.ready() && spotsub.ready() && viewsub.ready() && volunteersub.ready() && reviewsub.ready();
+  const reviews = Reviews.collection.find({ locationId: documentId }).fetch();
   return {
     documentId,
     ready,
+    reviews,
   };
 })(LocationPage);
