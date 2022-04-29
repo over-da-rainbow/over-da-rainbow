@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container, Header, Loader, Image, Icon } from 'semantic-ui-react';
+import { Container, Header, Loader, Image, Icon, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
+import { Roles } from 'meteor/alanning:roles';
+import { NavLink } from 'react-router-dom';
 import { Beaches } from '../../api/location/Beach';
 import { Hikes } from '../../api/location/Hike';
 import { Spots } from '../../api/location/Spot';
@@ -48,6 +50,9 @@ class LocationPage extends React.Component {
           <li>DON&apos;T touch the animals</li>
         </ul>
         <Header as="h4">Tags</Header>
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+          <Button as={NavLink} to={`/edit/${doc._id}`}>Edit Page</Button>
+        ) : ''}
         <Header as="h4"><Icon name="user"/>{doc.visited} Visits</Header>
         <hr/>
         <Header as="h4">Reviews</Header>
