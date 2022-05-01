@@ -36,6 +36,35 @@ class NavBar {
     await testController.click('#login-dropdown');
     await testController.click('#login-dropdown-sign-up');
   }
+
+  async gotoAddLocationPage(testController) {
+    await testController.click('#navbar-current-user');
+    await testController.click('#navbar-addLocation');
+  }
+
+  async gotoBulletinPage(testController) {
+    await testController.click('#navbar-bulletin');
+  }
+
+  async gotoBeachPage(testController) {
+    await testController.click('#navbar-beach');
+  }
+
+  async gotoHikePage(testController) {
+    await testController.click('#navbar-hike');
+  }
+
+  async gotoViewPage(testController) {
+    await testController.click('#navbar-view');
+  }
+
+  async gotoVolunteerPage(testController) {
+    await testController.click('#navbar-volunteer');
+  }
+
+  async gotoCampusPage(testController) {
+    await testController.click('#navbar-campus');
+  }
 }
 
 export const navBar = new NavBar();

@@ -17,7 +17,7 @@ class ListViews extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
+      <Container id='view-page'>
         <Header as="h2" textAlign="center">Scenic View Page</Header>
         <Card.Group>
           {this.props.views.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}

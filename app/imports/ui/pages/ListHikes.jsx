@@ -17,7 +17,7 @@ class ListHikes extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
+      <Container id='hike-page'>
         <Header as="h2" textAlign="center">Hike Page</Header>
         <Card.Group>
           {this.props.hikes.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}
