@@ -10,8 +10,10 @@ class LocationReviews extends React.Component {
         <Comment.Avatar as='a' src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
         <Comment.Content>
           <Comment.Author>{this.props.Review.owner}</Comment.Author>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          <Comment.Author>"{this.props.Review.title}"</Comment.Author>
           <Comment.Metadata>
-            <div>{this.props.Review.createdAt}</div>
+            <div>{this.props.Review.createdAt.toLocaleDateString('en-US')}</div>
             <div>
               <Icon name='star' />{this.props.Review.rating} rating
             </div>
