@@ -47,7 +47,7 @@ class Bulletin extends React.Component {
     let fRef = null;
     return (
       <Container id='bulletin-page'>
-        <Header as="h2" textAlign="center">Bulletin Board</Header>
+        <Header as="h2" textAlign="center">Message Board</Header>
         <Comment.Group size="large">
           {this.props.messages.map((bulletinMessage, index) => <BulletinMessage key={index} bulletinMessage={bulletinMessage}/>)}
         </Comment.Group>

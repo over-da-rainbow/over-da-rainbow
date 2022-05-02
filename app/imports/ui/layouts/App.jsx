@@ -22,6 +22,8 @@ import Signout from '../pages/Signout';
 import LocationPage from '../pages/LocationPage';
 import Bulletin from '../pages/Bulletin';
 import EditLocation from '../pages/EditLocation';
+import Event from '../pages/Events';
+import AddEvent from '../pages/AddEvent';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -43,7 +45,9 @@ class App extends React.Component {
             <ProtectedRoute path="/spot" component={ListSpots}/>
             <ProtectedRoute path="/volunteer" component={ListVolunteer}/>
             <ProtectedRoute path="/edit/:_id" component={EditLocation}/>
-            <ProtectedRoute path="/bulletin" component={Bulletin}/>
+            <ProtectedRoute path="/message" component={Bulletin}/>
+            <ProtectedRoute path="/event" component={Event}/>
+            <ProtectedRoute path="/addevent" component={AddEvent}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
             <AdminProtectedRoute path="/addlocation" component={AddLocation}/>
             <Route component={NotFound}/>
