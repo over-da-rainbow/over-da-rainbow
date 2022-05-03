@@ -20,3 +20,22 @@ body {
 .navbar-color-spacing {
     background-color: midnightblue !important;
 }
+
+.centered-custom-column-spacing {
+    margin-left: 50px !important;
+}
+
+.page-divider-size {
+    font-size: 30px !important;
+}
+
+
+.invisible-button {
+    padding: 0px !important;
+    margin: 20px !important;
+    background-color: azure !important;
+}
+
+
+
+
