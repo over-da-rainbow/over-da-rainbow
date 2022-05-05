@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
-import { Container, Dropdown, Form, FormGroup, Grid, Header, Message, Segment, TextArea } from 'semantic-ui-react';
+import { Container, Dropdown, Form, FormGroup, Grid, Header, Label, Message, Segment, TextArea } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
 
 /**
@@ -12,37 +12,31 @@ const avatarOptions = [
     key: 'Boar',
     text: 'Boar',
     value: 'Boar',
-    image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
+    image: { avatar: true, src: 'images/boar.png' },
   },
   {
     key: 'Kolea',
     text: 'Kolea',
     value: 'Kolea',
-    image: { avatar: true, src: '/images/avatar/small/elliot.jpg' },
+    image: { avatar: true, src: 'images/kolea.png' },
   },
   {
     key: 'Nene',
     text: 'Nene',
     value: 'Nene',
-    image: { avatar: true, src: '/images/avatar/small/stevie.jpg' },
+    image: { avatar: true, src: 'images/nene.png' },
   },
   {
     key: 'Monk Seal',
     text: 'Monk Seal',
     value: 'Monk Seal',
-    image: { avatar: true, src: '/images/avatar/small/christian.jpg' },
+    image: { avatar: true, src: 'images/monk-seal.png' },
   },
   {
     key: 'Honu',
     text: 'Honu',
     value: 'Honu',
-    image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
-  },
-  {
-    key: 'Chad',
-    text: 'Chad',
-    value: 'Chad',
-    image: { avatar: true, src: '/images/avatar/small/matt.jpg' },
+    image: { avatar: true, src: 'images/honu.png' },
   },
 ];
 
@@ -95,17 +89,15 @@ class Signup extends React.Component {
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/landing' } };
-    // if correct authentication, redirect to from: page instead of signup screen
     if (this.state.redirectToReferer) {
-      return <Redirect to={from}/>;
+      return <Redirect to={'/landing'}/>;
     }
     return (
       <Container id="signup-page">
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
           <Grid.Column>
             <Header as="h2" textAlign="center">
-              Register your account
+              Register your account and Setup Profile
             </Header>
             <Form onSubmit={this.submit}>
               <Segment stacked>
@@ -147,28 +139,30 @@ class Signup extends React.Component {
                     onChange={this.handleChange}
                   />
                 </FormGroup>
-                <FormGroup widths='equal'>
-                  <Dropdown
-                    id="signup-form-classYear"
-                    name="classYear"
-                    type="classYear"
-                    onChange={this.handleChange}
-                    placeholder='Freshman'
-                    fluid
-                    selection
-                    options={classOptions}
-                  />
-                  <Dropdown
-                    id="signup-form-avatar"
-                    name="avatar"
-                    type="avatar"
-                    onChange={this.handleChange}
-                    placeholder='Please choose avatar'
-                    fluid
-                    selection
-                    options={avatarOptions}
-                  />
-                </FormGroup>
+                <Label>Please select appropriate class</Label>
+                <Dropdown
+                  id="signup-form-classYear"
+                  name="classYear"
+                  type="classYear"
+                  onChange={this.handleChange}
+                  placeholder='Freshman'
+                  fluid
+                  selection
+                  options={classOptions}
+                />
+                <br/>
+                <Label>Please choose avatar</Label>
+                <Dropdown
+                  id="signup-form-avatar"
+                  name="avatar"
+                  type="avatar"
+                  onChange={this.handleChange}
+                  placeholder='Avatars'
+                  fluid
+                  selection
+                  options={avatarOptions}
+                />
+                <br/>
                 <Form.Input
                   label="Instagram Username"
                   id="signup-form-insta"

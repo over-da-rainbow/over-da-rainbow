@@ -10,11 +10,13 @@ function createUser(email, password, firstName, lastName, classYear, avatar, bio
     username: email,
     email: email,
     password: password,
-    firstName: firstName,
-    lastName: lastName,
-    classYear: classYear,
-    avatar: avatar,
-    bio: bio,
+    profile: {
+      firstName: firstName,
+      lastName: lastName,
+      classYear: classYear,
+      avatar: avatar,
+      bio: bio,
+    },
   });
   if (role === 'admin') {
     Roles.createRole(role, { unlessExists: true });
