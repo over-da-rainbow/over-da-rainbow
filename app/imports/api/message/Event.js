@@ -15,8 +15,7 @@ class EventsCollection {
     this.schema = new SimpleSchema({
       name: String,
       title: String,
-      date: String,
-      time: String,
+      datetime: String,
       location: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

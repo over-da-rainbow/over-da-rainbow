@@ -21,7 +21,7 @@ class Event extends React.Component {
       <Container id='event-page'>
         <Header as="h2" textAlign="center">Event Board</Header>
         <Comment.Group size="large">
-          {this.props.events.map((plannedEvent, index) => <PlannedEvent key={index} bulletinMessage={plannedEvent}/>)}
+          {this.props.events.map((plannedEvent, index) => <PlannedEvent key={index} plannedEvent={plannedEvent}/>)}
         </Comment.Group>
         <Button as={NavLink} to={'/addevent'}>Plan an Event</Button>
       </Container>

@@ -9,11 +9,12 @@ class PlannedEvent extends React.Component {
     return (
       <Comment>
         <Comment.Content>
-          <Comment.Author as='a'>{this.props.plannedEvent.name}</Comment.Author>
+          <Comment.Author as='a'>{this.props.plannedEvent.name}'s Event</Comment.Author>
           <Comment.Metadata>
-            <div>{this.props.plannedEvent.date}</div>
+            <div>Location: {this.props.plannedEvent.location}</div>
+            <div>Date/Time: {this.props.plannedEvent.datetime}</div>
           </Comment.Metadata>
-          <Comment.Text>{this.props.plannedEvent.location}</Comment.Text>
+          <Comment.Text>{this.props.plannedEvent.title}</Comment.Text>
         </Comment.Content>
       </Comment>
     );
@@ -25,8 +26,7 @@ PlannedEvent.propTypes = {
   plannedEvent: PropTypes.shape({
     name: PropTypes.string,
     title: PropTypes.string,
-    date: PropTypes.string,
-    time: PropTypes.string,
+    datetime: PropTypes.string,
     location: PropTypes.string,
   }).isRequired,
 };
