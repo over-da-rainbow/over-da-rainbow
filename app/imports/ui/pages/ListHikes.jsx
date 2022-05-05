@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Divider, Grid } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Hikes } from '../../api/location/Hike';
@@ -17,11 +17,15 @@ class ListHikes extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container id='hike-page'>
-        <Header as="h2" textAlign="center">Hike Page</Header>
-        <Card.Group>
-          {this.props.hikes.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}
-        </Card.Group>
+      <Container textAlign={'center'} id='hike-page'>
+        <Divider horizontal className={'page-divider-size'}>Hikes</Divider>
+        <Grid centered columns={1}>
+          <Grid.Column className={'centered-custom-column-spacing'}>
+            <Card.Group style={{ padding: 20 }}>
+              {this.props.hikes.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}
+            </Card.Group>
+          </Grid.Column>
+        </Grid>
       </Container>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Divider, Grid } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Volunteer } from '../../api/location/Volunteer';
@@ -17,11 +17,15 @@ class ListVolunteer extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container id='volunteer-page'>
-        <Header as="h2" textAlign="center">Volunteer Page</Header>
-        <Card.Group>
-          {this.props.volunteer.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}
-        </Card.Group>
+      <Container textAlign={'center'} id='volunteer-page'>
+        <Divider horizontal className={'page-divider-size'}>Volunteer</Divider>
+        <Grid centered columns={1}>
+          <Grid.Column className={'centered-custom-column-spacing'}>
+            <Card.Group style={{ padding: 20 }}>
+              {this.props.volunteer.map((locationCard, index) => <LocationCard key={index} locationCard={locationCard}/>)}
+            </Card.Group>
+          </Grid.Column>
+        </Grid>
       </Container>
     );
   }
