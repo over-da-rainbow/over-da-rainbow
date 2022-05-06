@@ -1,5 +1,5 @@
 import React from 'react';
-import { Feed, Loader } from 'semantic-ui-react';
+import { Feed, Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Beaches } from '../../api/location/Beach';
@@ -24,7 +24,7 @@ class PlannedEvent extends React.Component {
       doc = Volunteer.collection.findOne({ name: this.props.plannedEvent.location });
     }
     return (
-      <Feed.Event>
+      <Segment><Feed.Event>
         <Feed.Content>
           <Feed.Summary>
             <Feed.User as='a'>{this.props.plannedEvent.name}</Feed.User>&apos;s Event
@@ -35,7 +35,7 @@ class PlannedEvent extends React.Component {
             <NavLink to={`/location/${doc._id}`}>Location: {this.props.plannedEvent.location}</NavLink>
           </Feed.Meta>
         </Feed.Content>
-      </Feed.Event>
+      </Feed.Event></Segment>
     );
   }
 }
