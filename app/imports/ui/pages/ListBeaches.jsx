@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import {Container, Header, Loader, Card, Grid, Divider} from 'semantic-ui-react';
+import { Container, Loader, Card, Grid, Divider } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Beaches } from '../../api/location/Beach';

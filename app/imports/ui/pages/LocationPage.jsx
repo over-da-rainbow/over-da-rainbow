@@ -50,10 +50,10 @@ class LocationPage extends React.Component {
       redir = '/spot';
     } else if (Views.collection.findOne(this.props.documentId) != null) {
       doc = Views.collection.findOne(this.props.documentId);
-      redir = '/view'
+      redir = '/view';
     } else if (Volunteer.collection.findOne(this.props.documentId) != null) {
       doc = Volunteer.collection.findOne(this.props.documentId);
-      redir = '/volunteer'
+      redir = '/volunteer';
     }
     return (
       <Container>
