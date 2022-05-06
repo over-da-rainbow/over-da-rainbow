@@ -1,5 +1,5 @@
 import React from 'react';
-import { Comment } from 'semantic-ui-react';
+import { Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -7,16 +7,16 @@ import { withRouter } from 'react-router-dom';
 class PlannedEvent extends React.Component {
   render() {
     return (
-      <Comment>
-        <Comment.Content>
-          <Comment.Author as='a'>{this.props.plannedEvent.name}'s Event</Comment.Author>
-          <Comment.Metadata>
+      <Feed.Event>
+        <Feed.Content>
+          <Feed.User as='a'>{this.props.plannedEvent.name}&apos;s Event</Feed.User>
+          <Feed.Date>{this.props.plannedEvent.datetime}</Feed.Date>
+          <Feed.Meta>
             <div>Location: {this.props.plannedEvent.location}</div>
-            <div>Date/Time: {this.props.plannedEvent.datetime}</div>
-          </Comment.Metadata>
-          <Comment.Text>{this.props.plannedEvent.title}</Comment.Text>
-        </Comment.Content>
-      </Comment>
+            <div>{this.props.plannedEvent.title}</div>
+          </Feed.Meta>
+        </Feed.Content>
+      </Feed.Event>
     );
   }
 }

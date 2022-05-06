@@ -26,7 +26,9 @@ class AddEvent extends React.Component {
   // On submit, insert the data.
   submit(data, formRef) {
     const name = Meteor.user().username;
-    const { title, datetime, location } = data;
+    const { title, datetimea, location } = data;
+    const datetimex = new Date(datetimea);
+    const datetime = datetimex.toLocaleString('en-US', { timeZone: 'Etc/GMT' });
     Events.collection.insert({ name, title, datetime, location },
       (error) => {
         if (error) {
@@ -49,7 +51,7 @@ class AddEvent extends React.Component {
     // check for duplicate names when adding locations
     const formSchema = new SimpleSchema({
       title: String,
-      datetime: String,
+      datetimea: String,
       location: {
         type: String,
         allowedValues: names,
@@ -64,7 +66,7 @@ class AddEvent extends React.Component {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <TextField name='title'/>
-              <DateField name='datetime'/>
+              <DateField name='datetimea'/>
               <SelectField name='location'/>
               <SubmitField value='Create Event'/>
               <ErrorsField/>

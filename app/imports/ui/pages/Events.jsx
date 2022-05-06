@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Comment, Button } from 'semantic-ui-react';
+import { Container, Header, Loader, Feed, Button } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -20,9 +20,9 @@ class Event extends React.Component {
     return (
       <Container id='event-page'>
         <Header as="h2" textAlign="center">Event Board</Header>
-        <Comment.Group size="large">
+        <Feed>
           {this.props.events.map((plannedEvent, index) => <PlannedEvent key={index} plannedEvent={plannedEvent}/>)}
-        </Comment.Group>
+        </Feed>
         <Button as={NavLink} to={'/addevent'}>Plan an Event</Button>
       </Container>
     );
