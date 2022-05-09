@@ -11,31 +11,31 @@ const avatarOptions = [
   {
     key: 'Boar',
     text: 'Boar',
-    value: 'Boar',
+    value: 'boar',
     image: { avatar: true, src: 'images/boar.png' },
   },
   {
     key: 'Kolea',
     text: 'Kolea',
-    value: 'Kolea',
+    value: 'kolea',
     image: { avatar: true, src: 'images/kolea.png' },
   },
   {
     key: 'Nene',
     text: 'Nene',
-    value: 'Nene',
+    value: 'nene',
     image: { avatar: true, src: 'images/nene.png' },
   },
   {
     key: 'Monk Seal',
     text: 'Monk Seal',
-    value: 'Monk Seal',
+    value: 'monk-seal',
     image: { avatar: true, src: 'images/monk-seal.png' },
   },
   {
     key: 'Honu',
     text: 'Honu',
-    value: 'Honu',
+    value: 'honu',
     image: { avatar: true, src: 'images/honu.png' },
   },
 ];
@@ -78,19 +78,33 @@ class Signup extends React.Component {
   /* Handle Signup submission. Create user account and a profile entry, then redirect to the home page. */
   submit = () => {
     const { email, password, firstName, lastName, classYear, avatar, bio, insta } = this.state;
-    Accounts.createUser({ email, username: email, password, firstName, lastName, classYear, avatar, bio, insta }, (err) => {
+    Accounts.createUser({ email, username: email, password, profile: {
+      firstName: firstName,
+      lastName: lastName,
+      classYear: classYear,
+      avatar: avatar,
+      bio: bio,
+      insta: insta,
+    } }, (err) => {
       if (err) {
         this.setState({ error: err.reason });
       } else {
         this.setState({ error: '', redirectToReferer: true });
       }
     });
+    console.log(email);
+    console.log(firstName);
+    console.log(lastName);
+    console.log(classYear);
+    console.log(avatar);
+    console.log(bio);
+    console.log(insta);
   }
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
   render() {
     if (this.state.redirectToReferer) {
-      return <Redirect to={'/landing'}/>;
+      return <Redirect to={'/'}/>;
     }
     return (
       <Container id="signup-page">
