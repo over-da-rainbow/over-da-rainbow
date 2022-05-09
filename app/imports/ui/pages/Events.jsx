@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Feed, Button } from 'semantic-ui-react';
+import { Container, Header, Loader, Feed, Button, Divider } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -23,8 +23,8 @@ class Event extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container id='event-page'>
-        <Header as="h2" textAlign="center">Event Board</Header>
+      <Container textAlign={'center'} id='event-page'>
+        <Divider horizontal className={'page-divider-size'}>Events</Divider>
         <Feed size="large">
           {this.props.events.map((plannedEvent, index) => <PlannedEvent key={index} plannedEvent={plannedEvent}/>)}
         </Feed>

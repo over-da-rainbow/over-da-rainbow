@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Comment, Segment } from 'semantic-ui-react';
+import { Container, Divider, Loader, Comment, Segment } from 'semantic-ui-react';
 import { AutoForm, LongTextField, SubmitField } from 'uniforms-semantic';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -47,7 +47,7 @@ class Bulletin extends React.Component {
     let fRef = null;
     return (
       <Container id='bulletin-page'>
-        <Header as="h2" textAlign="center">Message Board</Header>
+        <Divider textAlign={'center'} horizontal className={'page-divider-size'}>Message Board</Divider>
         <Comment.Group size="large">
           {this.props.messages.map((bulletinMessage, index) => <BulletinMessage key={index} bulletinMessage={bulletinMessage}/>)}
         </Comment.Group>
