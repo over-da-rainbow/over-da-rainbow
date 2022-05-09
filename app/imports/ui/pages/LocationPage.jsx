@@ -72,7 +72,6 @@ class LocationPage extends React.Component {
           <li>DON&apos;T litter</li>
           <li>DON&apos;T touch the animals</li>
         </ul>
-        <Header as="h4">Tags</Header>
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
           <div>
             <Button as={NavLink} to={`/edit/${doc._id}`}>Edit Location</Button>
