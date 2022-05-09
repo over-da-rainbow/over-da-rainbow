@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Feed, Button, Divider } from 'semantic-ui-react';
+import { Container, Loader, Feed, Button, Divider } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
