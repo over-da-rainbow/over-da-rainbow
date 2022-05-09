@@ -22,18 +22,38 @@ class LocationPage extends React.Component {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
   }
 
+  delete() {
+    if (Beaches.collection.findOne(this.props.documentId) != null) {
+      Beaches.collection.remove({ _id: this.props.documentId });
+    } else if (Hikes.collection.findOne(this.props.documentId) != null) {
+      Hikes.collection.remove({ _id: this.props.documentId });
+    } else if (Spots.collection.findOne(this.props.documentId) != null) {
+      Spots.collection.remove({ _id: this.props.documentId });
+    } else if (Views.collection.findOne(this.props.documentId) != null) {
+      Views.collection.remove({ _id: this.props.documentId });
+    } else if (Volunteer.collection.findOne(this.props.documentId) != null) {
+      Volunteer.collection.remove({ _id: this.props.documentId });
+    }
+  }
+
   renderPage() {
     let doc = null;
+    let redir = null;
     if (Beaches.collection.findOne(this.props.documentId) != null) {
       doc = Beaches.collection.findOne(this.props.documentId);
+      redir = '/beach';
     } else if (Hikes.collection.findOne(this.props.documentId) != null) {
       doc = Hikes.collection.findOne(this.props.documentId);
+      redir = '/hike';
     } else if (Spots.collection.findOne(this.props.documentId) != null) {
       doc = Spots.collection.findOne(this.props.documentId);
+      redir = '/spot';
     } else if (Views.collection.findOne(this.props.documentId) != null) {
       doc = Views.collection.findOne(this.props.documentId);
+      redir = '/view';
     } else if (Volunteer.collection.findOne(this.props.documentId) != null) {
       doc = Volunteer.collection.findOne(this.props.documentId);
+      redir = '/volunteer';
     }
     return (
       <Container>
@@ -54,7 +74,10 @@ class LocationPage extends React.Component {
         </ul>
         <Header as="h4">Tags</Header>
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Button as={NavLink} to={`/edit/${doc._id}`}>Edit Page</Button>
+          <div>
+            <Button as={NavLink} to={`/edit/${doc._id}`}>Edit Location</Button>
+            <Button as={NavLink} to={redir} onClick={() => this.delete()}>Delete Location</Button>
+          </div>
         ) : ''}
         <Header as="h4"><Icon name="user"/>{doc.visited} Visits</Header>
         <hr/>
