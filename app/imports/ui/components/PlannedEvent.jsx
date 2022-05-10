@@ -27,7 +27,7 @@ class PlannedEvent extends React.Component {
       <Segment vertical><Feed.Event>
         <Feed.Content>
           <Feed.Summary>
-            <Feed.User as='a' href="">{this.props.plannedEvent.name}</Feed.User>&apos;s Event
+            <Feed.User as={NavLink} to={`/User/${this.props.plannedEvent.name}`}>{this.props.plannedEvent.name}</Feed.User>&apos;s Event
             <Feed.Date>{this.props.plannedEvent.datetime}</Feed.Date>
           </Feed.Summary>
           <Feed.Meta>

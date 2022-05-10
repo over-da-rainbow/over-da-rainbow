@@ -25,7 +25,7 @@ import EditLocation from '../pages/EditLocation';
 import UserProfile from '../pages/UserProfile';
 import Event from '../pages/Events';
 import AddEvent from '../pages/AddEvent';
-
+import ViewProfile from '../pages/ViewProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -40,6 +40,7 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/location/:_id" component={LocationPage}/>
+            <Route path="/User/:userName" component={ViewProfile}/>
             <ProtectedRoute path="/list" component={ListStuff}/>
             <ProtectedRoute path="/profile" component={UserProfile}/>
             <ProtectedRoute path="/beach" component={ListBeaches}/>
