@@ -43,12 +43,12 @@ class NavBar {
   }
 
   async gotoBulletinPage(testController) {
-    await testController.click('#navbar-bulletin');
+    await testController.click('#bulletin-dropdown');
     await testController.click('#bulletin-dropdown-messages');
   }
 
   async gotoEventsPage(testController) {
-    await testController.click('#navbar-bulletin');
+    await testController.click('#bulletin-dropdown');
     await testController.click('#bulletin-dropdown-events');
   }
 
