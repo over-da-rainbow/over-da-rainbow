@@ -66,11 +66,11 @@ class LocationPage extends React.Component {
         <Header as="h4">Do&apos;s and Don&apos;t&apos;s</Header>
         <ul>
           <li>DO read all the signs in the area</li>
-          <li>DO respect the locals</li>
+          <li>DO respect the locals and others</li>
         </ul>
         <ul>
-          <li>DON&apos;T litter</li>
-          <li>DON&apos;T touch the animals</li>
+          <li>DON&apos;T litter, always try to leave place better than found </li>
+          <li>DON&apos;T endanger wildlife </li>
         </ul>
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
           <div>

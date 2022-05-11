@@ -14,9 +14,8 @@ class ViewProfile extends React.Component {
 
   renderPage() {
     const doc = Meteor.users.findOne({ username: this.props.userName });
-    console.log(doc);
     return (
-      <Container>
+      <Container style={{ paddingTop: 100 }}>
         <Image src={`images/${doc.profile.avatar}.png`} size='medium' circular centered/>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         <Header as="h2" textAlign="center">{doc.profile.firstName}'s Profile</Header>

@@ -7,7 +7,7 @@ class LocationReviews extends React.Component {
   render() {
     return (
       <Comment>
-        <Comment.Avatar as='a' src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
+        <Comment.Avatar as='a' src='images/greenUser.png' />
         <Comment.Content>
           <Comment.Author>{this.props.Review.owner}</Comment.Author>
           {/* eslint-disable-next-line react/no-unescaped-entities */}

@@ -30,13 +30,12 @@ class Landing extends React.Component {
                 <Header className={'big-letters'} inverted as='h1'>Review</Header>
               </Grid.Column>
             </Grid.Row>
-
             <Grid.Row style={{ paddingTop: 70 }}>
               <Grid.Column>
-                <Header className={'big-letters'} inverted as='h1'>Suggest</Header>
+                <Header className={'big-letters'} inverted as='h1'>Interact</Header>
               </Grid.Column>
               <Grid.Column>
-                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Help out other users by suggesting your favorite spots!</Header>
+                <Header style={{ fontFamily: 'Academy Engraved LET', textAlign: 'center' }} inverted as='h1'>Feel free to interact with others by posting messages and planning future social events on the Bulletin!</Header>
               </Grid.Column>
             </Grid.Row>
           </Grid>
