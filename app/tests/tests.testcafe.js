@@ -3,6 +3,7 @@ import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
 import { bulletinPage } from './bulletin.page';
+import { eventPage } from './events.page';
 import { beachPage } from './beach.page';
 import { hikePage } from './hike.page';
 import { addLocationPage } from './addLocation.page';
@@ -53,6 +54,15 @@ test('Test that bulletin page shows up', async (testController) => {
   await navBar.isLoggedIn(testController, admin.username);
   await navBar.gotoBulletinPage(testController);
   await bulletinPage.isDisplayed(testController);
+  await navBar.logout(testController);
+});
+
+test('Test that events page shows up', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, admin.username, admin.password);
+  await navBar.isLoggedIn(testController, admin.username);
+  await navBar.gotoEventsPage(testController);
+  await eventPage.isDisplayed(testController);
   await navBar.logout(testController);
 });
 

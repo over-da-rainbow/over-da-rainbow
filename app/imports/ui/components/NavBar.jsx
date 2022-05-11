@@ -21,7 +21,7 @@ class NavBar extends React.Component {
               <Dropdown as="h3" id="bulletin-dropdown" text="Bulletin">
                 <Dropdown.Menu>
                   <Dropdown.Item id="bulletin-dropdown-messages" text="Messages" as={NavLink} exact to="/message"/>
-                  <Dropdown.Item id="login-dropdown-sign-up" text="Events" as={NavLink} exact to="/event"/>
+                  <Dropdown.Item id="bulletin-dropdown-events" text="Events" as={NavLink} exact to="/event"/>
                 </Dropdown.Menu>
               </Dropdown>
             </Menu.Item>,
