@@ -1,5 +1,4 @@
 import { Meteor } from 'meteor/meteor';
-import { Mongo } from 'meteor/mongo';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Beaches } from '../../api/location/Beach';
@@ -91,6 +90,6 @@ Meteor.publish('userData', function () {
   if (this.userId) {
     return Meteor.users.find();
   }
-  this.ready();
+  return this.ready();
 
 });
