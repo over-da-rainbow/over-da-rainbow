@@ -4,6 +4,7 @@ alanning:roles@3.4.0
 aldeed:collection2@3.5.0
 aldeed:schema-index@3.0.0
 allow-deny@1.1.1
+autopublish@1.0.7
 autoupdate@1.8.0
 babel-compiler@7.8.1
 babel-runtime@1.5.0

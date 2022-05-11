@@ -1,7 +1,7 @@
 import React from 'react';
 import { Comment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class BulletinMessage extends React.Component {
@@ -9,7 +9,7 @@ class BulletinMessage extends React.Component {
     return (
       <Comment>
         <Comment.Content>
-          <Comment.Author as='a'>{this.props.bulletinMessage.name}</Comment.Author>
+          <Comment.Author as={NavLink} to={`/User/${this.props.bulletinMessage.name}`}>{this.props.bulletinMessage.name}</Comment.Author>
           <Comment.Metadata>
             <div>{this.props.bulletinMessage.datetime}</div>
           </Comment.Metadata>
