@@ -42,6 +42,11 @@ class NavBar {
     await testController.click('#navbar-addLocation');
   }
 
+  async gotoProfilePage(testController) {
+    await testController.click('#navbar-current-user');
+    await testController.click('#navbar-profile');
+  }
+
   async gotoBulletinPage(testController) {
     await testController.click('#bulletin-dropdown');
     await testController.click('#bulletin-dropdown-messages');

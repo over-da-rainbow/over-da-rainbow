@@ -1,6 +1,7 @@
 import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
+import { profilePage } from './profile.page';
 import { navBar } from './navbar.component';
 import { bulletinPage } from './bulletin.page';
 import { eventPage } from './events.page';
@@ -45,6 +46,15 @@ test('Test that addLocation page shows up', async (testController) => {
   await navBar.isLoggedIn(testController, admin.username);
   await navBar.gotoAddLocationPage(testController);
   await addLocationPage.isDisplayed(testController);
+  await navBar.logout(testController);
+});
+
+test('Test that the profile page shows up', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, admin.username, admin.password);
+  await navBar.isLoggedIn(testController, admin.username);
+  await navBar.gotoProfilePage(testController);
+  await profilePage.isDisplayed(testController);
   await navBar.logout(testController);
 });
 

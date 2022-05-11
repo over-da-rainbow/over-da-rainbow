@@ -9,7 +9,7 @@ class UserProfile extends React.Component {
 
   renderPage() {
     return (
-      <Container style={{ paddingTop: 100 }}>
+      <Container style={{ paddingTop: 100 }} >
         {/* eslint-disable-next-line no-template-curly-in-string */}
         <Image src={`images/${Meteor.user().profile.avatar}.png`} size='medium' circular centered/>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -35,7 +35,7 @@ class UserProfile extends React.Component {
 
   renderAdminPage() {
     return (
-      <Container style={{ paddingTop: 100 }}>
+      <Container style={{ paddingTop: 100 }} id='profile-page' >
         {/* eslint-disable-next-line no-template-curly-in-string */}
         <Image src='images/greenUser.png' size='medium' circular centered/>
         {/* eslint-disable-next-line react/no-unescaped-entities */}

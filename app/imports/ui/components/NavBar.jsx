@@ -59,7 +59,7 @@ class NavBar extends React.Component {
                   </Dropdown.Item>
                 ) : ''}
                 <Dropdown.Item id="navbar-sign-out" icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
-                <Dropdown.Item id="login-dropdown-profile" icon="user circle" text="Profile" as={NavLink} exact to="/profile"/>
+                <Dropdown.Item id="navbar-profile" icon="user circle" text="Profile" as={NavLink} exact to="/profile"/>
               </Dropdown.Menu>
             </Dropdown>
           )}
